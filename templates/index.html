@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AshaBot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <img src="{{ url_for('static', filename='asha-icon.png') }}" alt="Asha" class="avatar">
+      <h1>Hello ji Asha is here</h1>
+    </div>
+
+    <div class="chat-body">
+      {% for i in range(answers|length) %}
+        <!-- Asha message with avatar -->
+        <div class="chat-row left">
+          <img src="{{ url_for('static', filename='asha-icon_2.png') }}" class="chat-avatar">
+          <div class="asha-message">{{ questions[i] }}</div>
+        </div>
+
+        <!-- User message with avatar AFTER message bubble -->
+<div class="chat-row right">
+  <div class="user-message">{{ answers[i] }}</div>
+  <img src="{{ url_for('static', filename='user_icon.png') }}" class="chat-avatar">
+</div>
+
+      {% endfor %}
+
+      {% if step < questions|length %}
+        <!-- Asha next question -->
+        <div class="chat-row left">
+          <img src="{{ url_for('static', filename='asha-icon_2.png') }}" class="chat-avatar">
+          <div class="asha-message">{{ questions[step] }}</div>
+        </div>
+      {% else %}
+        <div class="chat-row left">
+          <img src="{{ url_for('static', filename='asha-icon.png') }}" class="chat-avatar">
+          <div class="asha-message">Thank you for sharing, lil sis 💖 Asha is proud of you!</div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if step < 18 %}
+      <form method="POST" class="chat-input">
+        <input name="message" placeholder="Send a message……" required />
+        <button type="submit">➤</button>
+      </form>
+    {% else %}
+      <a href="{{ url_for('reset') }}">Restart</a>
+    {% endif %}
+  </div>
+</body>
+</html>
