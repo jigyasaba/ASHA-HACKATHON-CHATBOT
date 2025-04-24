@@ -1,0 +1,116 @@
+body {
+  font-family: sans-serif;
+  background: #f8f0fb;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    margin-inline-start: 140px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.chat-container {
+  width: 60%;
+  margin: 2rem auto;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  background: #6d2c91; /* deep purple */
+  color: white;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  margin-inline-start: 80px;
+  margin-inline-end: 0px;
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* Asha (left, purple bubble) */
+.asha-message {
+  align-self: flex-start;
+  background: #e7e0e7; /* soft purple */
+  color: #333;
+  padding: 0.75rem 1rem;
+  border-radius: 10px 10px 10px 0;
+  max-width: 70%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* User (right, pink bubble) */
+.user-message {
+  align-self: flex-end;
+  background: #c7b5be; /* soft pink */
+  color: #333;
+  padding: 0.75rem 1rem;
+  border-radius: 10px 10px 0 10px;
+  max-width: 70%;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.chat-input {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  background: #e9c0d3; /* muted pink */
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.chat-row {
+  display: flex;
+  align-items: flex-end;
+  margin: 0.5rem 0;
+}
+
+.chat-row.left {
+  flex-direction: row; /* Asha: avatar on left */
+}
+
+.chat-row.right {
+  flex-direction: row; /* User: avatar on right */
+  justify-content: flex-end;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+}
+
