@@ -113,10 +113,5 @@ Feel free to fork, modify, and use it in your own projects!
 Pull requests are welcome!
 For major changes, please open an issue first to discuss what you would like to change.
 
-📬 Contact
-Author: [Your Name Here]
-Email: your.email@example.com
-GitHub: your-github-username
-
 🚀 Happy Building with Asha!
 "Thank you for sharing, lil sis 💖 Asha is proud of you!"
